@@ -4,6 +4,16 @@ namespace Exercise1
 {
     class Program
     {
+        // Call function for the case supplied:
+        public static void Main()
+        {
+            int sumValue = 26;
+            int[] possibilities = { 1, 2 };
+            
+            // Print the result to the console:
+            Console.Write("Result: " + countNumberOfPossibilities(possibilities, sumValue));
+        }
+
         static int countNumberOfPossibilities(int[] possibleValues, int maximumCount)
         {
             if (maximumCount < 1 || possibleValues == null || possibleValues.Length < 1)
@@ -35,16 +45,6 @@ namespace Exercise1
 
             // Return the number of ways to sum up to the value supplied:
             return countPerPossibleResult[maximumCount];
-        }
-
-        // Call function for the case supplied:
-        public static void Main()
-        {
-            int sumValue = 26;
-            int[] possibilities = { 1, 2 };
-            
-
-            Console.Write("Result: " + countNumberOfPossibilities(possibilities, sumValue));
         }
     }
 }
